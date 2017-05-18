@@ -1,10 +1,10 @@
 import React from 'react';
 import {ListGroupItem, Media, Image} from 'react-bootstrap';
 
-const VideoListItem = ({video}) => {
+const VideoListItem = ({video, onVideoSelect}) => {
   const imageUrl = video.snippet.thumbnails.default.url;
   return (
-    <ListGroupItem bsStyle="info">
+    <ListGroupItem onClick={() => onVideoSelect(video)} bsStyle="info">
       <Media className="video-list">
         <Media.Left>
           <Image src={imageUrl} alt="thumbnail of video" rounded />
