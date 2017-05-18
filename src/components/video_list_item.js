@@ -1,5 +1,5 @@
 import React from 'react';
-import {ListGroupItem, Media} from 'react-bootstrap';
+import {ListGroupItem, Media, Image} from 'react-bootstrap';
 
 const VideoListItem = ({video}) => {
   const imageUrl = video.snippet.thumbnails.default.url;
@@ -7,7 +7,7 @@ const VideoListItem = ({video}) => {
     <ListGroupItem bsStyle="info">
       <Media className="video-list">
         <Media.Left>
-          <img src={imageUrl} alt="thumbnail of video" />
+          <Image src={imageUrl} alt="thumbnail of video" rounded />
         </Media.Left>
         <Media.Body>
           <Media.Heading>{video.snippet.title}</Media.Heading>
